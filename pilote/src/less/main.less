@@ -1,3 +1,30 @@
-p{
-	color:#0006FF;
+@heightHeader:70px;
+.header{
+  position:fixed;
+  top:0;
+  background-color:#333;
+  width:100%;
+  height:@heightHeader;
+  h1{
+	color:#fff;
+	text-align:center;
+	font-family:Lato;
+  }
+}
+
+.container{
+  padding:@heightHeader 0;
+}
+
+.footer{
+  height:@heightHeader;
+  position:fixed;
+  bottom:0;
+  background-color:#ccc;
+  width:100%;
+
+  h2{
+  	color:blue;
+  	text-align:right;
+  }	
 }

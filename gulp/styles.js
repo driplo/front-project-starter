@@ -5,13 +5,16 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     rename = require("gulp-rename"),
     cssmin = require('gulp-cssmin');
+    livereload = require('gulp-livereload');
 
 exports.paths = [
   'bower_components/bootstrap/dist/css/bootstrap.css',
   'bower_components/normalize.css/normalize.css',
   'bower_components/fontawesome/css/font-awesome.min.css',
-  'pilote/src/less/variables.less',
-  'pilote/src/less/main.less',
+  'bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css',
+  'bower_components/animsition/dist/css/animsition.min.css',
+  'bower_components/animate.css/animate.min.css',
+  'pilote/src/less/main.less'
 ];
 
 gulp.task('styles', function () {
@@ -23,4 +26,5 @@ gulp.task('styles', function () {
     .pipe(cssmin())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('pilote/public/css'))
+    .pipe(livereload());
 });
