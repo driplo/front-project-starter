@@ -10,10 +10,3 @@ gulp.task('header-footer', function () {
         .pipe(gulp.dest('./pilote/public/'))
         .pipe(w3cjs());
 });
-
-/*gulp.task('w3cjs', function () {
-    gulp.src('pilote/src/*.html')
-        
-        .pipe(concat('index.html'))
-        .pipe(gulp.dest('pilote/public/'));
-});*/

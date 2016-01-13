@@ -2,13 +2,14 @@ var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 
 // Static server
-gulp.task('browser-sync', function() {
+gulp.task('serve', function() {
     browserSync.init({
         server: {
             baseDir: "./pilote/public/"
         },
         files: ["pilote/public/css/*.css", "pilote/public/*.html", "pilote/public/js/*.js"],
-        host: "your.local.ip"
+        host: "localhost",
+        port: 1337
     });
 });
 
@@ -18,7 +19,6 @@ gulp.task('default', [
   'styles',
   'fonts',
   'vendors',
-  'vendorsfooter',
   'scripts',
   'header-footer'
 ]);
